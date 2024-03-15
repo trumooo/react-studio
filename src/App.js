@@ -17,7 +17,7 @@ function App() {
     setCart((currentCart) => {
       const itemName = item.name; // Assuming item names are unique
       const updatedCart = { ...currentCart };
-      if (!updatedCart[itemName]) {
+      if (!newCart[itemName]) {
         updatedCart[itemName] = { count: 1, price: item.price, name: item.name }; // Store name as well
       } else {
         updatedCart[itemName].count += 1;
@@ -27,7 +27,7 @@ function App() {
   };
 
   // Calculate total price
-  const totalPrice = Object.values(cart).reduce((total, item) => {
+  const sum = Object.values(cart).reduce((total, item) => {
     return total + item.count * item.price;
   }, 0);
 
@@ -44,7 +44,7 @@ function App() {
             {itemName}: {itemDetails.count} x ${itemDetails.price}
           </div>
         ))}
-        <div>Total: ${totalPrice.toFixed(2)}</div>
+        <div>Total: ${sum.toFixed(2)}</div>
       </div>
     </div>
   );
