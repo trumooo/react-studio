@@ -10,28 +10,33 @@ function App() {
   const [sortBy, setSortBy] = useState("None");
   const [cart, setCart] = useState({});
   const [displayedItems, setDisplayedItems] = useState([]);
-  const removeFromCart = (item) => {
+  //remove one from cart count 
+  const removeFromCart = (honey) => {
+
     setCart((currentCart) => {
         const updatedCart = { ...currentCart };
-        const itemName = item.companyName;
+        const honeyName = honey.companyName;
 
-        if (updatedCart[itemName]) {
-            if (updatedCart[itemName].count > 1) {
-                updatedCart[itemName].count -= 1;
+        if (updatedCart[honeyName]) {
+            if (updatedCart[honeyName].count > 1) {
+                updatedCart[honeyName].count -= 1;
             } else {
-                delete updatedCart[itemName]; // Remove item if count is 0
+              //if removing makes it zero
+                delete updatedCart[honeyName];
             }
         }
-
         return updatedCart;
     });
 };
 
+//filtering effects
   useEffect(() => {
     let updatedItems = honeyData
-      .filter(item => isOrganic ? item.organic : true)
-      .filter(item => stateFilter === "All" || item.stateOfOrigin === stateFilter)
-      .filter(item => pairingFilter === "All" || item.paring === pairingFilter);
+      .filter(honey => isOrganic ? honey.organic : true)
+      .filter(honey => stateFilter === "All" || honey.stateOfOrigin === stateFilter)
+      .filter(honey => pairingFilter === "All" || honey.paring === pairingFilter);
+    
+      //sorting effects
 
     switch (sortBy) {
       case "DollarsAsc":
@@ -52,19 +57,21 @@ function App() {
     setDisplayedItems(updatedItems);
   }, [isOrganic, stateFilter, pairingFilter, sortBy]);
 
-  const addToCart = (item) => {
+//the cart
+  const addToCart = (honey) => {
     setCart((currentCart) => {
-      const itemName = item.companyName; 
+      const honeyName = honey.companyName; 
       const updatedCart = { ...currentCart };
-      if (!updatedCart[itemName]) {
-        updatedCart[itemName] = { ...item, count: 1 };
+      if (!updatedCart[honeyName]) {
+        updatedCart[honeyName] = { ...honey, count: 1 };
       } else {
-        updatedCart[itemName].count += 1;
+        updatedCart[honeyName].count += 1;
       }
       return updatedCart;
     });
   };
 
+  //this is just the default settings for the filters
   const resetFilters = () => {
     setIsOrganic(false);
     setStateFilter("All");
@@ -72,10 +79,11 @@ function App() {
     setSortBy("None");
   };
 
-
-  const sum = Object.values(cart).reduce((total, item) => total + item.count * item.price, 0);
+//total price in cart
+  const sum = Object.values(cart).reduce((total, honey) => total + honey.count * honey.price, 0);
 
   return (
+    //this is the website's html
     <div className="App">
       <div className="body">
       <div className="header1">
@@ -83,13 +91,13 @@ function App() {
       </div>
 
       <div className="honey-items">
-       {displayedItems.map((item, index) => (
-          <HoneyItem key={index} item={item} addToCart={addToCart} removeFromCart={removeFromCart} />
+       {displayedItems.map((honey, index) => (
+          <HoneyItem key={index} honey={honey} addToCart={addToCart} removeFromCart={removeFromCart} />
         ))}
         </div>
       </div>
       <div className="filters">
-        <div className="idk">
+        <div className="filter-buffer">
           <h2>Filter Results</h2>
           <div className="body-filter"> 
             <div className="filter-space">
@@ -113,7 +121,6 @@ function App() {
             <option value="New York">New York</option>
             <option value="Texas">Texas</option>
             <option value="Vermont">Vermont</option>
-            {/* Dynamically populate states here based on your data */}
           </select>
           </div>
           
@@ -147,9 +154,9 @@ function App() {
 
       <div className="cart">
         <h2 className="title">Cart</h2>
-        {Object.entries(cart).map(([itemName, itemDetails], index) => (
+        {Object.entries(cart).map(([honeyName, itemDetails], index) => (
           <div className="items" key={index}>
-                        <img src={itemDetails.image} alt={`${itemDetails.companyName} honey`} style={{ width: '60px', height: '50px'}}/> {itemName}: {itemDetails.count} x ${itemDetails.price} ({itemDetails.ounces} oz)
+                        <img src={itemDetails.image} alt={`${itemDetails.companyName} honey`} style={{ width: '60px', height: '50px'}}/> {honeyName}: {itemDetails.count} x ${itemDetails.price} ({itemDetails.ounces} oz)
           </div>
         ))}
         <div className="total">Total: ${sum.toFixed(2)}</div>
