@@ -3,90 +3,120 @@
     "name": "Chocolate Chip Cookies",
     "description": "Four classic chocolate chip cookies",
     "price": 7.99,
-    "image": "images/anika.png"
+    "image": "images/anikhhona.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Matcha Mille Crepe Cake",
     "description": "Layers of matcha crepe and matcha cream filling, topped with strawberries",
     "price": 4.99,
-    "image": "images/aubrey.png"
+    "image": "images/aubrey.png",
+    "glutenFree": false,
+    "locallyMade": false
   },
   {
     "name": "Egg Custard Bun",
     "description": "A fluffy steamed bun with a savory egg filling",
     "price": 2.99,
-    "image": "images/connie.png"
+    "image": "images/connie.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Steamed Taro Buns",
     "description": "Two soft steamed buns filled with gooey purple taro filling",
     "price": 5.99,
-    "image": "images/dylan.png"
+    "image": "images/dylan.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Chocolate Fudge Brownie",
     "description": "A rich fudge brownie drizzled with chocolate ganache",
     "price": 3.99,
-    "image": "images/isaac.png"
+    "image": "images/isaac.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Macarons",
     "description": "A box of three macarons in assorted flavors",
     "price": 4.99,
-    "image": "images/jeff.png"
+    "image": "images/jeff.png",
+    "glutenFree": true, 
+    "locallyMade": false
   },
   {
     "name": "Multigrain Bread",
     "description": "A loaf of fresh-baked multigrain bread",
     "price": 4.99,
-    "image": "images/jenny.png"
+    "image": "images/jenny.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Croissant",
     "description": "A classic butter croissant with a flaky crust",
     "price": 2.99,
-    "image": "images/jessie.png"
+    "image": "images/jessie.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Toast with Butter",
     "description": "A slice of toast with a pat of butter",
     "price": 1.99,
-    "image": "images/kelly.png"
+    "image": "images/kelly.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Tiramisu",
     "description": "A classic tiramisu with layers of coffee-soaked ladyfingers and mascarpone cream",
     "price": 3.99,
-    "image": "images/lauren.png"
+    "image": "images/lauren.png",
+    "glutenFree": false,
+    "locallyMade": false
   },
   {
     "name": "Egg Tart",
-    "description": "A flaky pastry shell filled with a sweet egg custard",
+    "description": "A flaky gluten-free pastry shell filled with a sweet egg custard",
     "price": 2.99,
-    "image": "images/melissa.png"
+    "image": "images/melissa.png",
+    "glutenFree": true,
+    "locallyMade": true
   },
   {
     "name": "Everything Bagel",
     "description": "A toasted bagel with sesame seeds, poppy seeds, and dried onion",
     "price": 2.99,
-    "image": "images/miku.png"
+    "image": "images/miku.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Gingerbread Man",
     "description": "A soft gingerbread cookie with a sweet icing glaze",
     "price": 2.99,
-    "image": "images/nick.png"
+    "image": "images/nick.png",
+    "glutenFree": false,
+    "locallyMade": true
   },
   {
     "name": "Cheesecake",
     "description": "A slice of classic New York cheesecake topped with strawberry",
     "price": 3.99,
-    "image": "images/sunny.png"
+    "image": "images/sunny.png",
+    "glutenFree": false,
+    "locallyMade": false
   },
   {
     "name": "Cream Puff",
     "description": "Light and airy pâte à choux filled with sweet whipped cream",
     "price": 2.99,
-    "image": "images/tongyu.png"
+    "image": "images/tongyu.png",
+    "glutenFree": false,
+    "locallyMade": true
   }
 ]

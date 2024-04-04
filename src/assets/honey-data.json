@@ -1,0 +1,110 @@
+[
+  {
+    "companyName": "Sweet Blossom Honeys",
+    "image": "images/honey.png",
+    "stateOfOrigin": "Vermont",
+    "price": 3.99,
+    "ounces": 2,
+    "paring": "tea",
+    "organic": true
+  },
+  {
+    "companyName": "Golden Hive Products",
+    "image": "images/honey2.jpeg",
+    "stateOfOrigin": "California",
+    "price": 4.99,
+    "ounces": 1,
+    "paring": "coffee",
+    "organic": false
+  },
+  {
+    "companyName": "Pure Nature Honey Co.",
+    "image": "images/honey3.jpeg",
+    "stateOfOrigin": "Delaware",
+    "price": 5.99,
+    "ounces": 12,
+    "paring": "sandwiches",
+    "organic": true
+  },
+  {
+    "companyName": "Bee's Journey",
+    "image": "images/honey4.jpeg",
+    "stateOfOrigin": "Texas",
+    "price": 6.99,
+    "ounces": 14,
+    "paring": "baking",
+    "organic": false
+  },
+  {
+    "companyName": "Harvest Moon Honey",
+    "image": "images/honey5.jpeg",
+    "stateOfOrigin": "Florida",
+    "price": 7.99,
+    "ounces": 16,
+    "paring": "oatmeal",
+    "organic": true
+  },
+  {
+    "companyName": "Blossom Peak Naturals",
+    "image": "images/honey6.jpeg",
+    "stateOfOrigin": "New York",
+    "price": 8.99,
+    "ounces": 18,
+    "paring": "tea",
+    "organic": false
+  },
+  {
+    "companyName": "Wildflower Honey Harvest",
+    "image": "images/honey7.jpeg",
+    "stateOfOrigin": "Colorado",
+    "price": 9.99,
+    "ounces": 20,
+    "paring": "coffee",
+    "organic": true
+  },
+  {
+    "companyName": "Blue Ridge Bee Company",
+    "image": "images/honey8.jpeg",
+    "stateOfOrigin": "Texas",
+    "price": 10.99,
+    "ounces": 22,
+    "paring": "sandwiches",
+    "organic": false
+  },
+  {
+    "companyName": "Sunshine Apiaries",
+    "image": "images/honey9.jpeg",
+    "stateOfOrigin": "Georgia",
+    "price": 11.99,
+    "ounces": 24,
+    "paring": "baking",
+    "organic": true
+  },
+  {
+    "companyName": "Beekeeper's Select",
+    "image": "images/honey10.jpeg",
+    "stateOfOrigin": "Colorado",
+    "price": 12.99,
+    "ounces": 26,
+    "paring": "oatmeal",
+    "organic": false
+  },
+  {
+    "companyName": "Honeycomb Homestead",
+    "image": "images/honey11.jpeg",
+    "stateOfOrigin": "Washington",
+    "price": 13.99,
+    "ounces": 28,
+    "paring": "tea",
+    "organic": true
+  },
+  {
+    "companyName": "Nectar of the Gods",
+    "image": "images/honey12.jpeg",
+    "stateOfOrigin": "California",
+    "price": 14.99,
+    "ounces": 30,
+    "paring": "coffee",
+    "organic": false
+  }
+]
