@@ -7,7 +7,7 @@
 .header1{
     text-align: center;
     
-}
+} 
 .filter-buffer{
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +73,7 @@
 .cart {
     top: 2vw;
     right: 1vw;
-    width: 26vw;
+    width: 20vw;
     height: 100%;
     text-align: left;
     position: fixed;
