@@ -7,9 +7,35 @@ function App() {
   const [isOrganic, setIsOrganic] = useState(false);
   const [stateFilter, setStateFilter] = useState("All");
   const [pairingFilter, setPairingFilter] = useState("All");
-  const [sortBy, setSortBy] = useState("None");
+  const [priceBy, setPriceBy] = useState("None");
   const [cart, setCart] = useState({});
   const [displayedItems, setDisplayedItems] = useState([]);
+
+//add to the cart
+const addToCart = (honey) => {
+  setCart((currentCart) => {
+    const honeyName = honey.companyName; 
+    const updatedCart = { ...currentCart };
+    if (!updatedCart[honeyName]) {
+      updatedCart[honeyName] = { ...honey, count: 1 };
+    } else {
+      updatedCart[honeyName].count += 1;
+    }
+    return updatedCart;
+  });
+};
+
+//this is just the default settings for the filters
+const resetFilters = () => {
+  setIsOrganic(false);
+  setStateFilter("All");
+  setPairingFilter("All");
+  setPriceBy("None");
+};
+
+//total price in cart
+const sum = Object.values(cart).reduce((total, honey) => total + honey.count * honey.price, 0);
+
   //remove one from cart count 
   const removeFromCart = (honey) => {
 
@@ -38,7 +64,7 @@ function App() {
     
       //sorting effects
 
-    switch (sortBy) {
+    switch (priceBy) {
       case "DollarsAsc":
         updatedItems.sort((a, b) => a.price - b.price);
         break;
@@ -55,32 +81,7 @@ function App() {
     }
 
     setDisplayedItems(updatedItems);
-  }, [isOrganic, stateFilter, pairingFilter, sortBy]);
-
-//the cart
-  const addToCart = (honey) => {
-    setCart((currentCart) => {
-      const honeyName = honey.companyName; 
-      const updatedCart = { ...currentCart };
-      if (!updatedCart[honeyName]) {
-        updatedCart[honeyName] = { ...honey, count: 1 };
-      } else {
-        updatedCart[honeyName].count += 1;
-      }
-      return updatedCart;
-    });
-  };
-
-  //this is just the default settings for the filters
-  const resetFilters = () => {
-    setIsOrganic(false);
-    setStateFilter("All");
-    setPairingFilter("All");
-    setSortBy("None");
-  };
-
-//total price in cart
-  const sum = Object.values(cart).reduce((total, honey) => total + honey.count * honey.price, 0);
+  }, [isOrganic, stateFilter, pairingFilter, priceBy]);
 
   return (
     //this is the website's html
@@ -139,7 +140,7 @@ function App() {
 
           
           <label htmlFor="sort">Sort By:</label>
-          <select id="sort" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+          <select id="sort" value={priceBy} onChange={(e) => setPriceBy(e.target.value)}>
             <option value="None">Select</option>
             <option value="DollarsAsc">Price (Low to High)</option>
             <option value="DollarsDesc">Price (High to Low)</option>

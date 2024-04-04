@@ -57,18 +57,12 @@
 }
 
 .honey-item {
-    padding: 15px;
-    box-shadow: 3px 3px 3px 1px rgb(0 0 0 / 20%);
+    padding: 12px;
+    box-shadow: 4px 3px 3px 1px rgb(0 0 0 / 20%);
     border-radius: 8px;
     text-align: center;
     border-radius: 8px;
     border: 3px solid #fca311; 
-}
-
-.honey-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
 }
 .cart {
     top: 2vw;
@@ -99,10 +93,10 @@
 
 .total {
     position: absolute;
-    bottom: 400px;
+    bottom: 200px;
     font-size: xx-large;
     margin-top: 40px;
-    text-align:left;
+    text-align:center;
 }
 .checkoutbox:hover{
     cursor: pointer;
@@ -110,7 +104,7 @@
 .checkoutbox {
     position: absolute;
     right: 5vw;
-    bottom: 300px;
+    bottom: 40px;
     font-size: xx-large;
     margin-top: 40px;
     text-align:left;

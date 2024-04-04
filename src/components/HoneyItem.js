@@ -7,7 +7,7 @@ function HoneyItem({ honey, addToCart, removeFromCart }) {
         <div className="honey-item">
             <img src={honey.image} alt={`${honey.companyName} honey`} style={{ width: '300px', height: '200px' }}/>
             <h3>{honey.companyName}</h3>
-
+            
             <p>Origin: {honey.stateOfOrigin}</p>
             <p>Price: ${honey.price} - {honey.ounces} oz</p>
             <p>Pairs well with: {honey.paring}</p>
