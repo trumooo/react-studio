@@ -5,7 +5,7 @@
     "stateOfOrigin": "Vermont",
     "price": 3.99,
     "ounces": 2,
-    "paring": "tea",
+    "paring": "Tea",
     "organic": true
   },
   {
@@ -14,7 +14,7 @@
     "stateOfOrigin": "California",
     "price": 4.99,
     "ounces": 1,
-    "paring": "coffee",
+    "paring": "Coffee",
     "organic": false
   },
   {
@@ -23,7 +23,7 @@
     "stateOfOrigin": "Delaware",
     "price": 5.99,
     "ounces": 12,
-    "paring": "sandwiches",
+    "paring": "Sandwiches",
     "organic": true
   },
   {
@@ -32,7 +32,7 @@
     "stateOfOrigin": "Texas",
     "price": 6.99,
     "ounces": 14,
-    "paring": "baking",
+    "paring": "Baking",
     "organic": false
   },
   {
@@ -41,7 +41,7 @@
     "stateOfOrigin": "Florida",
     "price": 7.99,
     "ounces": 16,
-    "paring": "oatmeal",
+    "paring": "Oatmeal",
     "organic": true
   },
   {
@@ -50,7 +50,7 @@
     "stateOfOrigin": "New York",
     "price": 8.99,
     "ounces": 18,
-    "paring": "tea",
+    "paring": "Tea",
     "organic": false
   },
   {
@@ -59,7 +59,7 @@
     "stateOfOrigin": "Colorado",
     "price": 9.99,
     "ounces": 20,
-    "paring": "coffee",
+    "paring": "Coffee",
     "organic": true
   },
   {
@@ -68,7 +68,7 @@
     "stateOfOrigin": "Texas",
     "price": 10.99,
     "ounces": 22,
-    "paring": "sandwiches",
+    "paring": "Sandwiches",
     "organic": false
   },
   {
@@ -77,7 +77,7 @@
     "stateOfOrigin": "Georgia",
     "price": 11.99,
     "ounces": 24,
-    "paring": "baking",
+    "paring": "Baking",
     "organic": true
   },
   {
@@ -86,7 +86,7 @@
     "stateOfOrigin": "Colorado",
     "price": 12.99,
     "ounces": 26,
-    "paring": "oatmeal",
+    "paring": "Oatmeal",
     "organic": false
   },
   {
@@ -95,7 +95,7 @@
     "stateOfOrigin": "Washington",
     "price": 13.99,
     "ounces": 28,
-    "paring": "tea",
+    "paring": "Tea",
     "organic": true
   },
   {
@@ -104,7 +104,7 @@
     "stateOfOrigin": "California",
     "price": 14.99,
     "ounces": 30,
-    "paring": "coffee",
+    "paring": "Coffee",
     "organic": false
   }
 ]

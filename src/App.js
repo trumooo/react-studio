@@ -26,7 +26,7 @@ const addToCart = (honey) => {
 };
 
 //this is just the default settings for the filters
-const resetFilters = () => {
+const reset = () => {
   setIsOrganic(false);
   setStateFilter("All");
   setPairingFilter("All");
@@ -57,7 +57,7 @@ const sum = Object.values(cart).reduce((total, honey) => total + honey.count * h
 
 //filtering effects
   useEffect(() => {
-    let updatedItems = honeyData
+    let updatedhoney = honeyData
       .filter(honey => isOrganic ? honey.organic : true)
       .filter(honey => stateFilter === "All" || honey.stateOfOrigin === stateFilter)
       .filter(honey => pairingFilter === "All" || honey.paring === pairingFilter);
@@ -66,21 +66,21 @@ const sum = Object.values(cart).reduce((total, honey) => total + honey.count * h
 
     switch (priceBy) {
       case "DollarsAsc":
-        updatedItems.sort((a, b) => a.price - b.price);
+        updatedhoney.sort((i, j) => i.price - j.price);
         break;
       case "DollarsDesc":
-        updatedItems.sort((a, b) => b.price - a.price);
+        updatedhoney.sort((i, j) => j.price - i.price);
         break;
       case "OzAsc":
-        updatedItems.sort((a, b) => a.ounces - b.ounces);
+        updatedhoney.sort((i, j) => i.ounces - j.ounces);
         break;
       case "OzDesc":
-        updatedItems.sort((a, b) => b.ounces - a.ounces);
+        updatedhoney.sort((i, j) => j.ounces - i.ounces);
         break;
       
     }
 
-    setDisplayedItems(updatedItems);
+    setDisplayedItems(updatedhoney);
   }, [isOrganic, stateFilter, pairingFilter, priceBy]);
 
   return (
@@ -102,17 +102,17 @@ const sum = Object.values(cart).reduce((total, honey) => total + honey.count * h
           <h2>Filter Results</h2>
           <div className="body-filter"> 
             <div className="filter-space">
-          <label htmlFor="organicFilter">Organic Only:</label>
+          <label htmlFor="organicFilter">Only Show Organic Goods:</label>
           <input
             type="checkbox"
             id="organicFilter"
             checked={isOrganic}
-            onChange={(e) => setIsOrganic(e.target.checked)}
+            onChange={(orgo) => setIsOrganic(orgo.target.checked)}
           />
           </div>
           <div className="filter-space">
           <label htmlFor="stateFilter">State of Origin:</label>
-          <select id="stateFilter" value={stateFilter} onChange={(e) => setStateFilter(e.target.value)}>
+          <select id="stateFilter" value={stateFilter} onChange={(state) => setStateFilter(state.target.value)}>
             <option value="All">All States</option>
             <option value="California">California</option>
             <option value="Colorado">Colorado</option>
@@ -128,19 +128,20 @@ const sum = Object.values(cart).reduce((total, honey) => total + honey.count * h
           <div className="filter-space">
 
           <label htmlFor="pairingFilter">Pairing:</label>
-          <select id="pairingFilter" value={pairingFilter} onChange={(e) => setPairingFilter(e.target.value)}>
+          <select id="pairingFilter" value={pairingFilter} onChange={(filter) => setPairingFilter(filter.target.value)}>
             <option value="All">All Pairings</option>
-            <option value="tea">Tea</option>
-            <option value="coffee">Coffee</option>
-            <option value="sandwiches">Sandwiches</option>
-            <option value="baking">Baking</option>
-            <option value="oatmeal">Oatmeal</option>
+            <option value="Tea">Tea</option>
+            <option value="Coffee">Coffee</option>
+            <option value="Sandwiches">Sandwiches</option>
+            <option value="Baking">Baking</option>
+            <option value="Oatmeal">Oatmeal</option>
           </select>
-          </div>            <div className="filter-space">
+          </div>            
+          <div className="filter-space">
 
           
           <label htmlFor="sort">Sort By:</label>
-          <select id="sort" value={priceBy} onChange={(e) => setPriceBy(e.target.value)}>
+          <select id="sort" value={priceBy} onChange={(sort) => setPriceBy(sort.target.value)}>
             <option value="None">Select</option>
             <option value="DollarsAsc">Price (Low to High)</option>
             <option value="DollarsDesc">Price (High to Low)</option>
@@ -150,7 +151,7 @@ const sum = Object.values(cart).reduce((total, honey) => total + honey.count * h
           </div>
           </div>
         </div>
-        <button onClick={resetFilters}>Reset Filters</button>
+        <button onClick={reset}>Reset Search</button>
       </div>
 
       <div className="cart">
