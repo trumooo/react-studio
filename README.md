@@ -7,3 +7,5 @@ Next, you can run `npm start` to run the app in the development mode.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser of choice.
 
+# Deployed Site
+The current website is also fully deployed and available here: [https://honey-site-green.vercel.app/](https://honey-site-green.vercel.app/)
